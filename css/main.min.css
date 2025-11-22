@@ -22984,20 +22984,7 @@ form textarea:required:valid {
     color: var(--t-muted);
 }
 
-/* 1. Freeze the background page completely */
-html.modal-open,
+/* Lock body scroll when modal is open */
 body.modal-open {
-    overflow: hidden !important;
-    height: 100vh !important; /* Forces body to fit screen, cutting off overflow */
-    padding-right: 15px; /* Optional: prevents layout shift when scrollbar disappears */
-}
-
-/* 2. Prevent "Scroll Chaining" inside the popup */
-.mxd-modal-scroll {
-    flex: 1;
-    overflow-y: auto;
-    padding: 3rem;
-    
-    /* THIS IS THE MAGIC LINE: */
-    overscroll-behavior: contain; 
+    overflow: hidden;
 }
