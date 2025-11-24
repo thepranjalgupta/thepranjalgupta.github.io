@@ -667,7 +667,7 @@ class="mxd-rotate-slow bannervideo"
                             <img loading="lazy" src="img/tech/NET core.svg" alt="Tech Stack Icon">
                           </div>
                           <div class="mxd-tech-stack-cards__title">
-                            <p class="t-bright t-caption">ASP.NET MVC</p>
+                            <p class="t-bright t-caption">ASP.NET</p>
                           </div>
                         </div>
                       </div>
@@ -1301,7 +1301,7 @@ class="mxd-rotate-slow bannervideo"
         <div class="mxd-block">
           <div class="mxd-projects-list hover-reveal">
             <!-- item -->
-            <a class="mxd-projects-list__item hover-reveal__item trigger-popup" href="javascript:void(0);">
+            <a class="mxd-projects-list__item hover-reveal__item trigger-popup" href="javascript:void(0);" data-filter-trigger="app">
               <div class="mxd-projects-list__border anim-uni-in-up"></div>
               <div class="hover-reveal__content hover-reveal-360x440">
                     <video autoplay loop muted playsinline style="width:105%; height: 100%; object-fit: initial;"> 
@@ -1371,7 +1371,7 @@ class="mxd-rotate-slow bannervideo"
               <div class="mxd-projects-list__border anim-uni-in-up"></div>
             </a>
             <!-- item -->
-            <a class="mxd-projects-list__item hover-reveal__item trigger-popup" href="javascript:void(0);">
+            <a class="mxd-projects-list__item hover-reveal__item trigger-popup" href="javascript:void(0);" data-filter-trigger="website">
               <div class="mxd-projects-list__border anim-uni-in-up"></div>
               <div class="hover-reveal__content hover-reveal-360x440">
                               <video loading="lazy" autoplay loop muted playsinline style="width:114%; height: 110%; object-fit: initial;"> 
@@ -1442,7 +1442,7 @@ class="mxd-rotate-slow bannervideo"
               <div class="mxd-projects-list__border anim-uni-in-up"></div>
             </a>
             <!-- item -->
-            <a class="mxd-projects-list__item hover-reveal__item trigger-popup" href="javascript:void(0);">
+            <a class="mxd-projects-list__item hover-reveal__item trigger-popup" href="javascript:void(0);" data-filter-trigger="cross">
               <div class="mxd-projects-list__border anim-uni-in-up"></div>
               <div class="hover-reveal__content hover-reveal-360x440">
                              <video loading="lazy" autoplay loop muted playsinline style="width:114%; height: 110%; object-fit: initial;"> 
@@ -1514,7 +1514,7 @@ class="mxd-rotate-slow bannervideo"
             <!-- item -->
            
             <!-- item -->
-            <a class="mxd-projects-list__item hover-reveal__item trigger-popup" href="javascript:void(0);">
+            <a class="mxd-projects-list__item hover-reveal__item trigger-popup" href="javascript:void(0);" data-filter-trigger="app">
               <div class="mxd-projects-list__border anim-uni-in-up"></div>
               <div class="hover-reveal__content hover-reveal-360x440">
                                 <video loading="lazy" autoplay loop muted playsinline style="width:114%; height: 110%; object-fit: initial;"> 
@@ -1565,7 +1565,7 @@ class="mxd-rotate-slow bannervideo"
                     </div>
                     <div class="col-12 col-md-6 col-xl-2 mxd-grid-item no-margin">
                       <div class="mxd-projects-list__product anim-uni-in-up">
-                        <p>Mobile app</p>
+                        <p>Control app</p>
                         <div class="mxd-projects-list__icon-v2">
                           <i class="ph-bold ph-arrow-up-right"></i>
                         </div>
@@ -1577,7 +1577,7 @@ class="mxd-rotate-slow bannervideo"
               <div class="mxd-projects-list__border anim-uni-in-up"></div>
             </a>
 
-            <a class="mxd-projects-list__item hover-reveal__item trigger-popup" href="javascript:void(0);">
+            <a class="mxd-projects-list__item hover-reveal__item trigger-popup" href="javascript:void(0);" data-filter-trigger="uiux">
               <div class="mxd-projects-list__border anim-uni-in-up"></div>
               <div class="hover-reveal__content hover-reveal-360x440">
                              <video loading="lazy" autoplay loop muted playsinline style="width:114%; height: 110%; object-fit: initial;"> 
@@ -1646,6 +1646,25 @@ class="mxd-rotate-slow bannervideo"
       </div>
     </div>
     <!-- Section - Projects List #02 End -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     <!-- Section - Services Cards Start -->
     <div class="mxd-section overflow-hidden padding-pre-title">
       <div class="mxd-container grid-container">
@@ -2182,7 +2201,7 @@ class="mxd-rotate-slow bannervideo"
 
 
 
-<div id="projectModal" class="mxd-modal-overlay">
+<!-- <div id="projectModal" class="mxd-modal-overlay">
   <div class="mxd-modal-container">
     
     <div class="mxd-modal-header">
@@ -2290,10 +2309,97 @@ class="mxd-rotate-slow bannervideo"
   </div>
 </div>
 
+ -->
 
 
+<div id="projectModal" class="mxd-modal-overlay">
+  <div class="mxd-modal-container">
+    
+    <div class="mxd-modal-header">
+      <div class="header-left">
+        <!-- <h2 class="mxd-modal-title">Portfolio</h2> -->
+        
+        <div class="mxd-filter-container">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="app">Applications</button>
+          <button class="filter-btn" data-filter="website">Websites</button>
+          <button class="filter-btn" data-filter="cross">Cross-Platform</button>
+          <button class="filter-btn" data-filter="uiux">UI/UX</button>
+        </div>
+      </div>
 
+      <button id="closeModalBtn" class="mxd-modal-close">
+        <i class="ph-bold ph-x"></i>
+      </button>
+    </div>
 
+    <div class="mxd-modal-scroll">
+      <div class="mxd-modal-grid">
+
+        <div class="mxd-modal-card" data-category="website">
+          <div class="modal-card-image">
+            <img src="img/project/project7.jpg" alt="Project">
+          </div>
+          <div class="modal-card-info">
+            <h3>Web Reality</h3>
+            <p>Website Development</p>
+          </div>
+        </div>
+
+        <div class="mxd-modal-card" data-category="app">
+          <div class="modal-card-image">
+             <img src="img/project/project6.jpg" alt="Project">
+          </div>
+          <div class="modal-card-info">
+            <h3>App Design</h3>
+            <p>Mobile Application</p>
+          </div>
+        </div>
+
+        <div class="mxd-modal-card" data-category="cross">
+          <div class="modal-card-image">
+             <img src="img/project/project8.jpg" alt="Project">
+          </div>
+          <div class="modal-card-info">
+            <h3>Dashboard UI</h3>
+            <p>SaaS Platform</p>
+          </div>
+        </div>
+
+        <div class="mxd-modal-card" data-category="website">
+          <div class="modal-card-image">
+            <img src="img/project/project7.jpg" alt="Project">
+          </div>
+          <div class="modal-card-info">
+            <h3>Corporate Site</h3>
+            <p>Website Development</p>
+          </div>
+        </div>
+
+        <div class="mxd-modal-card" data-category="app">
+          <div class="modal-card-image">
+             <img src="img/project/project6.jpg" alt="Project">
+          </div>
+          <div class="modal-card-info">
+            <h3>Fitness App</h3>
+            <p>Mobile Application</p>
+          </div>
+        </div>
+
+        <div class="mxd-modal-card" data-category="uiux">
+          <div class="modal-card-image">
+             <img src="img/mine/uxui.png" alt="Project">
+          </div>
+          <div class="modal-card-info">
+            <h3>Banking Prototype</h3>
+            <p>Figma Design</p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -2305,7 +2411,7 @@ class="mxd-rotate-slow bannervideo"
   <script src="js/app.min.js"></script>
   <!-- counters -->
 
-<script>
+<!-- <script>
   document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('projectModal');
     const closeBtn = document.getElementById('closeModalBtn');
@@ -2351,8 +2457,100 @@ class="mxd-rotate-slow bannervideo"
         }
     });
 });
-</script>
+</script> -->
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // --- MODAL VARIABLES ---
+    const modal = document.getElementById('projectModal');
+    const closeBtn = document.getElementById('closeModalBtn');
+    const openBtns = document.querySelectorAll('.trigger-popup');
+
+    // --- FILTER VARIABLES ---
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.mxd-modal-card');
+
+    // --- 1. MODAL OPEN/CLOSE LOGIC ---
+    
+    const openModal = () => {
+        modal.classList.add('is-open');
+        document.body.classList.add('modal-open'); 
+        document.documentElement.classList.add('modal-open');
+        if (window.lenis) window.lenis.stop();
+    };
+
+    const closeModal = () => {
+        modal.classList.remove('is-open');
+        document.body.classList.remove('modal-open');
+        document.documentElement.classList.remove('modal-open'); 
+        if (window.lenis) window.lenis.start();
+    };
+
+    // --- 2. MAIN LOGIC: OPEN & AUTO-FILTER ---
+    openBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // 1. Open the modal
+            openModal();
+
+            // 2. Check which button was clicked (Android? Web?)
+            const filterTrigger = btn.getAttribute('data-filter-trigger');
+
+            // 3. If it has a specific trigger, activate that filter inside the modal
+            if (filterTrigger) {
+                // Find the corresponding button inside the modal
+                const targetFilterBtn = document.querySelector(`.filter-btn[data-filter="${filterTrigger}"]`);
+                
+                // If found, simulate a click on it
+                if (targetFilterBtn) {
+                    targetFilterBtn.click();
+                }
+            } else {
+                // If no specific trigger (e.g. generic button), click "All"
+                const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
+                if(allBtn) allBtn.click();
+            }
+        });
+    });
+
+    // --- 3. STANDARD EVENTS ---
+    if(closeBtn) closeBtn.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) closeModal();
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+    });
+
+    // --- 4. FILTERING LOGIC ---
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Visual Active State
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filterValue = btn.getAttribute('data-filter');
+
+            // Filter Cards
+            projectCards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                if (filterValue === 'all' || filterValue === category) {
+                    card.classList.remove('hidden');
+                    card.style.animation = 'none';
+                    card.offsetHeight; /* trigger reflow */
+                    card.style.animation = null; 
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        });
+    });
+
+});
+</script>
   <script>
     const statsCounter1 = new countUp.CountUp("stats-counter-1", 3, optionsPlus);
     const statsCounter2 = new countUp.CountUp("stats-counter-2", 70, optionsPlus);
