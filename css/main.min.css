@@ -23191,9 +23191,9 @@ body.modal-open {
 
 /* Active State */
 .filter-btn.active {
-    background: #000;       /* Replace with var(--t-bright) */
-    color: #fff;            /* Replace with var(--base) */
-    border-color: #000;
+    background: #DDF160;       /* Replace with var(--t-bright) */
+    color: #000;            /* Replace with var(--base) */
+    border-color: #FFf;
 }
 
 /* Remove desktop underline if present */
