@@ -23182,7 +23182,7 @@ body.modal-open {
     border-radius: 50px;
     border: 1px solid #ccc; /* Replace with var(--st-medium) */
     background: transparent;
-    font-size: 0.9rem;
+    font-size: 1.5rem;
     font-weight: 500;
     white-space: nowrap;
     cursor: pointer;
