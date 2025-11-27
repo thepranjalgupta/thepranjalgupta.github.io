@@ -23136,3 +23136,110 @@ body.modal-open {
 #projectPreviewImage {
     object-fit: contain; 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- GLOBAL STYLES (Desktop Defaults) --- */
+.mxd-filter-container {
+    width: 100%;
+    position: relative;
+    padding: 10px 0;
+}
+
+/* --- TRACK (Wrapper) --- */
+/* On Desktop, this is just a normal flex container */
+.filter-track {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap; /* Allow buttons to wrap to next line on desktop */
+    width: 100%;
+}
+
+/* --- BUTTON STYLING (Pills) --- */
+.filter-btn {
+    flex: 0 0 auto;
+    padding: 8px 24px;
+    border-radius: 50px;
+    border: 1px solid #ccc; /* Replace with var(--st-medium) */
+    background: transparent;
+    font-size: 0.9rem;
+    font-weight: 500;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Active State */
+.filter-btn.active {
+    background: #000;       /* Replace with var(--t-bright) */
+    color: #fff;            /* Replace with var(--base) */
+    border-color: #000;
+}
+
+/* Remove desktop underline if present */
+.filter-btn.active::after { display: none; }
+
+/* Hide duplicate buttons on Desktop */
+.filter-btn[data-is-clone="true"] {
+    display: none;
+}
+
+/* --- MOBILE ONLY SLIDER (Max-Width 768px) --- */
+@media (max-width: 768px) {
+    
+    /* 1. Container Window */
+    .mxd-filter-container {
+        overflow: hidden; /* Hide off-screen buttons */
+        
+        /* Fade effect on edges */
+        mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    }
+
+    /* 2. Moving Track */
+    .filter-track {
+        flex-wrap: nowrap;      /* Force single line */
+        width: max-content;     /* Force wide width */
+        
+        /* The Infinite Animation */
+        animation: scroll-left 20s linear infinite;
+        will-change: transform;
+    }
+    
+    /* 3. Show Clones for Loop */
+    .filter-btn[data-is-clone="true"] {
+        display: block;
+    }
+
+    /* 4. Animation Keyframes */
+    @keyframes scroll-left {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); } /* Move 50% because we have 2 sets */
+    }
+
+    /* 5. Pause on Touch */
+    .mxd-filter-container:hover .filter-track,
+    .mxd-filter-container:active .filter-track {
+        animation-play-state: paused;
+    }
+}

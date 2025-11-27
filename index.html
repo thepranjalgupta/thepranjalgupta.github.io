@@ -2711,6 +2711,77 @@ class="mxd-rotate-slow bannervideo"
     });
 
 });
+
+
+
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    
+    const container = document.querySelector('.mxd-filter-container');
+
+    if (container) {
+        // 1. Create the moving track wrapper
+        const track = document.createElement('div');
+        track.className = 'filter-track';
+
+        // 2. Move existing buttons into the track
+        // We use Array.from because children collection changes as we move elements
+        const originalButtons = Array.from(container.children);
+        originalButtons.forEach(btn => track.appendChild(btn));
+
+        // 3. Clone buttons for the infinite loop effect
+        // We clone them so we have [Set A][Set A] side-by-side
+        originalButtons.forEach(btn => {
+            const clone = btn.cloneNode(true);
+            clone.classList.remove('active'); // Start clones as inactive
+            clone.setAttribute('data-is-clone', 'true'); // Mark as clone
+            
+            // Add click event to clones to trigger the original filter logic
+            // (Assumes you have a separate filter logic handler elsewhere)
+            clone.addEventListener('click', function() {
+                const filterVal = this.getAttribute('data-filter');
+                const originalBtn = track.querySelector(`.filter-btn:not([data-is-clone])[data-filter="${filterVal}"]`);
+                if(originalBtn) originalBtn.click();
+            });
+
+            track.appendChild(clone);
+        });
+
+        // 4. Put the track back into the container
+        container.appendChild(track);
+    }
+
+    // --- OPTIONAL: LINKING CLONES TO FILTER LOGIC ---
+    // If you are using the filter logic from before, update your click listener:
+    const allButtons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.mxd-modal-card');
+
+    allButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const val = btn.getAttribute('data-filter');
+
+            // Visual Update: Highlight ALL matching buttons (original + clone)
+            allButtons.forEach(b => {
+                if(b.getAttribute('data-filter') === val) b.classList.add('active');
+                else b.classList.remove('active');
+            });
+
+            // Filter Logic (Show/Hide Cards)
+            if(cards.length > 0) {
+                cards.forEach(card => {
+                    const cat = card.getAttribute('data-category');
+                    if(val === 'all' || val === cat) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            }
+        });
+    });
+
+});
 </script>
   <script>
     const statsCounter1 = new countUp.CountUp("stats-counter-1", 3, optionsPlus);
