@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thepranjalgupta.github.io/sitemap.xml
